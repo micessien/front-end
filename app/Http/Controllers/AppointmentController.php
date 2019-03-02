@@ -41,4 +41,19 @@ class AppointmentController extends Controller
     {
         return view('appointment.confirm');
     }
+	public function contraceptive()
+    {
+        return view('appointment.contraceptive');
+    }
+	public function menstruation()
+    {
+        return view('appointment.menstruation');
+    }
+	public function infections()
+    {
+        return view('appointment.infections');
+    }public function cancer()
+    {
+        return view('appointment.cancer');
+    }
 }

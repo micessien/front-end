@@ -24,10 +24,10 @@
                         <nav aria-label="" class="add_top_20">
                             <ul class="pagination pagination-sm">
 
-                                <li class="page-item active"><a class="page-link" href="">STI Tests</a></li>
-                                <li class="page-item"><a class="page-link" href="{{ url('contraceptive') }}">Contraceptive</a></li>
-                                <li class="page-item"><a class="page-link" href="{{ url('menstruation') }}">Menstruation</a></li>
-                                <li class="page-item"><a class="page-link" href="{{ url('infections') }}">Infections</a></li>
+                                <li class="page-item"><a class="page-link" href="{{ url('portfolio') }}">STI Tests</a></li>
+                                <li class="page-item"><a class="page-link" href="{{ url('contraceptive') }}">contraceptive</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">menstruation</a></li>
+                                <li class="page-item"><a class="page-link" href="{{ url('infections') }}">infections</a></li>
                                 <li class="page-item">
                                     <a class="page-link" href="{{ url('cancer') }}">Cancer</a>
                                 </li>

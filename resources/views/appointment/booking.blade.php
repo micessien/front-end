@@ -78,7 +78,7 @@
 					<hr>
 					<!--End step -->
 
-					<div class="form_title">
+					<!-- <div class="form_title">
 						<h3><strong>2</strong>Payment Information</h3>
 						<p>
 							Mussum ipsum cacilds, vidis litro abertis.
@@ -131,7 +131,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!--End row -->
 
 						<h5>Or checkout with Paypal</h5>

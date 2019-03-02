@@ -11,7 +11,7 @@ use Illuminate\Database\DetectsLostConnections;
 class Connector
 {
     use DetectsLostConnections;
-
+ 
     /**
      * The default PDO connection options.
      *

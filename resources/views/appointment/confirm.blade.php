@@ -7,18 +7,37 @@
 		<div class="container margin_120">
 			<div class="row justify-content-center">
 				<div class="col-lg-8">
-					<div id="confirm">
-						<div class="icon icon--order-success svg add_bottom_15">
-							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72">
-								<g fill="none" stroke="#8EC343" stroke-width="2">
-									<circle cx="36" cy="36" r="35" style="stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;"></circle>
-									<path d="M17.417,37.778l9.93,9.909l25.444-25.393" style="stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;"></path>
-								</g>
-							</svg>
-						</div>
-					<h2>Thanks for your booking!</h2>
-					<p>You'll receive a confirmation email at mail@example.com</p>
-					</div>
+          <div class="box_general_3 booking">
+    						<form>
+    							<div class="title">
+    								<h3>Your booking</h3>
+    							</div>
+    							<div class="summary">
+    								<ul>
+    									<li>Date: <strong class="float-right">11/12/2017</strong></li>
+    									<li>Time: <strong class="float-right">10.30 am</strong></li>
+    									<li>Dr. Name: <strong class="float-right">Dr. julia Jhones</strong></li>
+    								</ul>
+    							</div>
+    							<ul class="treatments checkout clearfix">
+    								<li>
+    									Back Pain visit <strong class="float-right">$55</strong>
+    								</li>
+    								<li>
+    									Cardiovascular screen <strong class="float-right">$55</strong>
+    								</li>
+    								<li class="total">
+    									Total <strong class="float-right">$110</strong>
+    								</li>
+    							</ul>
+    							<hr>
+    						
+    						</form>
+    					</div>
+    					<!-- /box_general -->
+    				</aside>
+    				<!-- /asdide -->
+
 				</div>
 			</div>
 			<!-- /row -->
