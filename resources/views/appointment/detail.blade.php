@@ -43,10 +43,6 @@
 							<small>(145)</small>
 							<a href="badges.html" data-toggle="tooltip" data-placement="top" data-original-title="Badge Level" class="badge_list_1"><img src="{{ url('img/badges/badge_1.svg') }}" width="15" height="15" alt=""></a>
 						</span>
-						<ul class="statistic">
-							<li>854 Views</li>
-							<li>124 Patients</li>
-						</ul>
 						<ul class="contacts">
 							<li><h6>Address</h6>859 60th, Brooklyn, NY, 11220</li>
 							<li><h6>Phone</h6><a href="tel://000434323342">+00043 4323342</a></li>
@@ -76,13 +72,15 @@
 
 							<div class="tab-pane fade show active" id="book" role="tabpanel" aria-labelledby="book-tab">
 								<p class="lead add_bottom_30">Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-								<form>
+								<form action="{{ route('book.store') }}" method="POST">
+                  {{ csrf_field() }}
 									<div class="main_title_3">
 										<h3><strong>1</strong>Select your date</h3>
 									</div>
 									<div class="form-group add_bottom_45">
 										<div id="calendar"></div>
-										<input type="hidden" id="my_hidden_input">
+										<input type="hidden" id="my_hidden_input" name="date" required="required">
+
 										<ul class="legend">
 											<li><strong></strong>Available</li>
 											<li><strong></strong>Not available</li>
@@ -95,27 +93,27 @@
 										<div class="col-md-3 col-6 text-center">
 											<ul class="time_select">
 												<li>
-													<input type="radio" id="radio1" name="radio_time" value="09.30am">
-													<label for="radio1">09.30am</label>
+													<input type="radio" id="radio1" name="radio_time" value="09:30">
+													<label for="radio1">09:30</label>
 												</li>
 												<li>
-													<input type="radio" id="radio2" name="radio_time" value="10.00am">
+													<input type="radio" id="radio2" name="radio_time" value="10:00">
 													<label for="radio2">10.00am</label>
 												</li>
 												<li>
-													<input type="radio" id="radio3" name="radio_time" value="10.30am">
+													<input type="radio" id="radio3" name="radio_time" value="10:30">
 													<label for="radio3">10.30am</label>
 												</li>
 												<li>
-													<input type="radio" id="radio4" name="radio_time" value="11.00am">
+													<input type="radio" id="radio4" name="radio_time" value="11:00">
 													<label for="radio4">11.00am</label>
 												</li>
 												<li>
-													<input type="radio" id="radio5" name="radio_time" value="11.30am">
+													<input type="radio" id="radio5" name="radio_time" value="11:30">
 													<label for="radio5">11.30am</label>
 												</li>
 												<li>
-													<input type="radio" id="radio6" name="radio_time" value="12.00am">
+													<input type="radio" id="radio6" name="radio_time" value="12:00">
 													<label for="radio6">12.00am</label>
 												</li>
 											</ul>
@@ -151,7 +149,7 @@
 									</div>
 									<!-- /row -->
 
-									<div class="main_title_3">
+									<!-- <div class="main_title_3">
 										<h3><strong>3</strong>Select visit</h3>
 									</div>
 									<ul class="treatments clearfix">
@@ -203,11 +201,11 @@
 												<label for="visit8" class="css-label">Back Pain visit <strong>$55</strong></label>
 											</div>
 										</li>
-									</ul>
+									</ul> -->
+                	<center>  <input type="submit" value="Book Now"  class="btn_1 medium text-center" />	</center>
 								</form>
 								<hr>
-								<p class="text-center"><a href="{{ url('booking') }}" class="btn_1 medium">Book Now</a></p>
-							</div>
+					 		</div>
 							<!-- /tab_1 -->
 
 							<div class="tab-pane fade" id="general" role="tabpanel" aria-labelledby="general-tab">
@@ -394,4 +392,5 @@
 		<!-- /container -->
 	</main>
     <!-- /main -->
+
 @endsection

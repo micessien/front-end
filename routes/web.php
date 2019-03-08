@@ -29,5 +29,5 @@ Route::prefix('trainning')->group(function() {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/book', 'BookController');

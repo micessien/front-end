@@ -14,6 +14,7 @@ class SpecialisteCategorie extends Migration
     public function up()
     {
       Schema::create('specialiste_categorie', function (Blueprint $table) {
+        $table->increments('id');
         $table->integer('categorie_id')->unsigned();
         $table->integer('specialiste_id')->unsigned();
         $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');

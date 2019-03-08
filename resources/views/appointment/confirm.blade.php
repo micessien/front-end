@@ -14,12 +14,12 @@
     							</div>
     							<div class="summary">
     								<ul>
-    									<li>Date: <strong class="float-right">11/12/2017</strong></li>
-    									<li>Time: <strong class="float-right">10.30 am</strong></li>
+    									<li>Date: <strong class="float-right">{{$data->date_booking}}</strong></li>
+    									<li>Time: <strong class="float-right">{{$data->time}}</strong></li>
     									<li>Dr. Name: <strong class="float-right">Dr. julia Jhones</strong></li>
     								</ul>
     							</div>
-    							<ul class="treatments checkout clearfix">
+    							<!-- <ul class="treatments checkout clearfix">
     								<li>
     									Back Pain visit <strong class="float-right">$55</strong>
     								</li>
@@ -29,9 +29,9 @@
     								<li class="total">
     									Total <strong class="float-right">$110</strong>
     								</li>
-    							</ul>
+    							</ul> -->
     							<hr>
-    						
+
     						</form>
     					</div>
     					<!-- /box_general -->

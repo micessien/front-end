@@ -14,6 +14,7 @@ class BookingCategorie extends Migration
     public function up()
     {
       Schema::create('booking_categorie', function (Blueprint $table) {
+        $table->increments('id');
         $table->integer('categorie_id')->unsigned();
         $table->integer('booking_id')->unsigned();
         $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');

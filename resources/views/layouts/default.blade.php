@@ -58,8 +58,8 @@
                     </div>
                     <div class="col-lg-9 col-6">
                         <ul id="top_access">
-                            <li><a href="login.html"><i class="pe-7s-user"></i></a></li>
-                            <li><a href="register-doctor.html"><i class="pe-7s-add-user"></i></a></li>
+                            <li><a href="{{ url('/login') }}"><i class="pe-7s-user"></i></a></li>
+                            <!-- <li><a href="register-doctor.html"><i class="pe-7s-add-user"></i></a></li> -->
                         </ul>
                         <nav id="menu" class="main-menu">
                             <ul>
@@ -136,6 +136,12 @@
 			format: "yyyy-mm-dd",
 			datesDisabled: ["2017/10/20", "2017/11/21", "2017/12/21", "2018/01/21", "2018/02/21", "2018/03/21"],
 		});
+		$('#calendar').datepicker().on('changeDate', function() {
+		            let nb = $('#calendar').datepicker('getDate');
+								nb =  nb.getFullYear() + '/' + (nb.getMonth() + 1) + '/' + nb.getDate();
+
+		            $('input[type=hidden][id=my_hidden_input]').val(nb);
+		        });
 	</script>
 
 </body>

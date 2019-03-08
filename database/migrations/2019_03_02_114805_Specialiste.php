@@ -21,6 +21,7 @@ class Specialiste extends Migration
         $table->string('Adress');
         $table->string('email');
         $table->string('contact');
+        $table->string('image');
         $table->timestamps();
         });
     }

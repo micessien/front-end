@@ -2002,6 +2002,8 @@
 	$.fn.datepicker.DPGlobal = DPGlobal;
 
 
+
+
 	/* DATEPICKER NO CONFLICT
 	* =================== */
 

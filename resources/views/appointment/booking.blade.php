@@ -132,7 +132,7 @@
 								</div>
 							</div>
 						</div> -->
-						<!--End row -->
+						<!--End row
 
 						<h5>Or checkout with Paypal</h5>
 						<p>
@@ -142,65 +142,11 @@
 							<img src="{{ url('/assets/img/paypal_bt.png') }}" alt="Image">
 						</p>
 					</div>
-					<hr>
+					<hr> -->
 					<!--End step -->
 
-					<div class="form_title">
-						<h3><strong>3</strong>Billing Address</h3>
-						<p>
-							Mussum ipsum cacilds, vidis litro abertis.
-						</p>
-					</div>
-					<div class="step">
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<label>Country</label>
-								<div class="form-group">
-									<select class="form-control" name="country" id="country">
-										<option value="">Select your country</option>
-										<option value="Europe">Ghana</option>
-										<option value="United states">Cote d'Ivoire</option>
-										<option value="Asia">Mali</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<label>Street line 1</label>
-									<input type="text" id="street_1" name="street_1" class="form-control" placeholder="Street line 1">
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<label>Street line 2</label>
-									<input type="text" id="street_2" name="street_2" class="form-control" placeholder="Street line 1">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>City</label>
-									<input type="text" id="city_booking" name="city_booking" class="form-control" placeholder="Miami">
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="form-group">
-									<label>State</label>
-									<input type="text" id="state_booking" name="state_booking" class="form-control" placeholder="Florida">
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="form-group">
-									<label>Postal code</label>
-									<input type="text" id="postal_code" name="postal_code" class="form-control" placeholder="00342">
-								</div>
-							</div>
-						</div>
-						<!--End row -->
-					</div>
+
+
 					<hr>
 					<!--End step -->
 					<div id="policy">
@@ -210,6 +156,7 @@
 								<label class="container_check">I accept <a href="#0">terms and conditions and general policy</a>
 									<input type="checkbox">
 									<span class="checkmark"></span>
+                  	<a href="{{ url('confirm') }}" class="btn_1 full-width">Confirm</a>
 								</label>
 							</div>
 						</div>
@@ -217,37 +164,6 @@
 				</div>
 				</div>
 				<!-- /col -->
-				<aside class="col-xl-4 col-lg-4" id="sidebar">
-					<div class="box_general_3 booking">
-						<form>
-							<div class="title">
-								<h3>Your booking</h3>
-							</div>
-							<div class="summary">
-								<ul>
-									<li>Date: <strong class="float-right">11/12/2017</strong></li>
-									<li>Time: <strong class="float-right">10.30 am</strong></li>
-									<li>Dr. Name: <strong class="float-right">Dr. julia Jhones</strong></li>
-								</ul>
-							</div>
-							<ul class="treatments checkout clearfix">
-								<li>
-									Back Pain visit <strong class="float-right">$55</strong>
-								</li>
-								<li>
-									Cardiovascular screen <strong class="float-right">$55</strong>
-								</li>
-								<li class="total">
-									Total <strong class="float-right">$110</strong>
-								</li>
-							</ul>
-							<hr>
-							<a href="{{ url('confirm') }}" class="btn_1 full-width">Confirm and pay</a>
-						</form>
-					</div>
-					<!-- /box_general -->
-				</aside>
-				<!-- /asdide -->
 			</div>
 			<!-- /row -->
 		</div>
