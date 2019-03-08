@@ -129,12 +129,15 @@
     <!-- SPECIFIC SCRIPTS -->
     <script src="/assets/js/bootstrap-datepicker.js"></script>
 	<script>
+        $.fn.datepicker.defaults.format = "mm/dd/yyyy";
 		$('#calendar').datepicker({
-			todayHighlight: true,
+            todayHighlight: true,
+            showOnFocus: true,
 			daysOfWeekDisabled: [0],
 			weekStart: 1,
 			format: "yyyy-mm-dd",
 			datesDisabled: ["2017/10/20", "2017/11/21", "2017/12/21", "2018/01/21", "2018/02/21", "2018/03/21"],
+<<<<<<< HEAD
 		});
 		$('#calendar').datepicker().on('changeDate', function() {
 		            let nb = $('#calendar').datepicker('getDate');
@@ -142,6 +145,17 @@
 
 		            $('input[type=hidden][id=my_hidden_input]').val(nb);
 		        });
+=======
+        });
+
+        $('#calendar').datepicker().on('changeDate', function(e) {
+            // 'e' here contains the extra attributes
+            let nb = $('#calendar').datepicker('getDate');
+            alert(nb);
+            // console.log(nb);
+        });
+        
+>>>>>>> ef82e072d657f3dbb0face3675c6ec92412417ae
 	</script>
 
 </body>
