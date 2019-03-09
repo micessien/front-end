@@ -58,7 +58,8 @@
         <!-- /box_list -->
       </div>
       <!-- /row -->
-      <nav aria-label class="add_top_20">
+      <pagination :data="specialistes" @pagination-change-page="getResults"></pagination>
+      <!-- <nav aria-label class="add_top_20">
         <ul class="pagination pagination-sm">
           <li class="page-item disabled">
             <a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -76,7 +77,7 @@
             <a class="page-link" href="#">Next</a>
           </li>
         </ul>
-      </nav>
+      </nav>-->
       <!-- /pagination -->
     </div>
     <!-- /col -->
@@ -94,13 +95,20 @@ export default {
   },
   data() {
     return {
-      specialistes: []
+      specialistes: {}
       // specialiste: {
       //   firstname: ""
       // }
     };
   },
   methods: {
+    // Our method to GET results from a Laravel endpoint
+    getResults(page = 1) {
+      axios.get("/api/specialistes?page=" + page).then(response => {
+        this.specialistes = response.data;
+      });
+    },
+
     fetchData() {
       axios
         .get("/api/specialistes")

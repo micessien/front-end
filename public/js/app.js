@@ -48617,6 +48617,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -48624,7 +48625,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
   data: function data() {
     return {
-      specialistes: []
+      specialistes: {}
       // specialiste: {
       //   firstname: ""
       // }
@@ -48632,11 +48633,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
-    fetchData: function fetchData() {
+    // Our method to GET results from a Laravel endpoint
+    getResults: function getResults() {
       var _this = this;
 
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+
+      axios.get("/api/specialistes?page=" + page).then(function (response) {
+        _this.specialistes = response.data;
+      });
+    },
+    fetchData: function fetchData() {
+      var _this2 = this;
+
       axios.get("/api/specialistes").then(function (res) {
-        _this.specialistes = res.data;
+        _this2.specialistes = res.data;
       }).catch(function (err) {
         console.log(err);
       });
@@ -48653,58 +48664,66 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "col-lg-12" }, [
-      _c(
-        "div",
-        { staticClass: "row" },
-        _vm._l(_vm.specialistes.data, function(specialiste) {
-          return _c("div", { key: specialiste.id, staticClass: "col-md-4" }, [
-            _c("div", { staticClass: "box_list wow fadeIn" }, [
-              _c("a", { staticClass: "wish_bt", attrs: { href: "#0" } }),
-              _vm._v(" "),
-              _c("figure", [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("img", {
-                    staticClass: "img-fluid",
-                    attrs: { src: "/images/" + specialiste.image, alt: "" }
-                  }),
+    _c(
+      "div",
+      { staticClass: "col-lg-12" },
+      [
+        _c(
+          "div",
+          { staticClass: "row" },
+          _vm._l(_vm.specialistes.data, function(specialiste) {
+            return _c("div", { key: specialiste.id, staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "box_list wow fadeIn" }, [
+                _c("a", { staticClass: "wish_bt", attrs: { href: "#0" } }),
+                _vm._v(" "),
+                _c("figure", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: { src: "/images/" + specialiste.image, alt: "" }
+                    }),
+                    _vm._v(" "),
+                    _vm._m(0, true)
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "wrapper" }, [
+                  _c("small", [_vm._v(_vm._s(specialiste.title))]),
                   _vm._v(" "),
-                  _vm._m(0, true)
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "wrapper" }, [
-                _c("small", [_vm._v(_vm._s(specialiste.title))]),
-                _vm._v(" "),
-                _c("h3", [
-                  _vm._v(
-                    _vm._s(specialiste.firstname) +
-                      " " +
-                      _vm._s(specialiste.lastname)
-                  )
+                  _c("h3", [
+                    _vm._v(
+                      _vm._s(specialiste.firstname) +
+                        " " +
+                        _vm._s(specialiste.lastname)
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n              Meet your specialist\n              "
+                    ),
+                    _c("strong", [_vm._v(_vm._s(specialiste.address))])
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1, true),
+                  _vm._v(" "),
+                  _vm._m(2, true)
                 ]),
                 _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n              Meet your specialist\n              "
-                  ),
-                  _c("strong", [_vm._v(_vm._s(specialiste.address))])
-                ]),
-                _vm._v(" "),
-                _vm._m(1, true),
-                _vm._v(" "),
-                _vm._m(2, true)
-              ]),
-              _vm._v(" "),
-              _vm._m(3, true)
+                _vm._m(3, true)
+              ])
             ])
-          ])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _vm._m(4)
-    ])
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c("pagination", {
+          attrs: { data: _vm.specialistes },
+          on: { "pagination-change-page": _vm.getResults }
+        })
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = [
@@ -48777,53 +48796,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Book now")])])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      { staticClass: "add_top_20", attrs: { "aria-label": "" } },
-      [
-        _c("ul", { staticClass: "pagination pagination-sm" }, [
-          _c("li", { staticClass: "page-item disabled" }, [
-            _c(
-              "a",
-              {
-                staticClass: "page-link",
-                attrs: { href: "#", tabindex: "-1" }
-              },
-              [_vm._v("Previous")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "page-item active" }, [
-            _c("a", { staticClass: "page-link", attrs: { href: "#" } }, [
-              _vm._v("1")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "page-item" }, [
-            _c("a", { staticClass: "page-link", attrs: { href: "#" } }, [
-              _vm._v("2")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "page-item" }, [
-            _c("a", { staticClass: "page-link", attrs: { href: "#" } }, [
-              _vm._v("3")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "page-item" }, [
-            _c("a", { staticClass: "page-link", attrs: { href: "#" } }, [
-              _vm._v("Next")
-            ])
-          ])
-        ])
-      ]
-    )
   }
 ]
 render._withStripped = true
