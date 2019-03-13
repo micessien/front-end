@@ -14,8 +14,8 @@
     							</div>
     							<div class="summary">
     								<ul>
-    									<li>Date: <strong class="float-right">13/03/2019</strong></li>
-    									<li>Time: <strong class="float-right">09am</strong></li>
+    									<li>Date: <strong class="float-right">17/03/2019</strong></li>
+    									<li>Time: <strong class="float-right">10.00am</strong></li>
     									<li>Dr. Name: <strong class="float-right">Dr. Miss Kasey McDermott Astrid Berge</strong></li>
     								</ul>
     							</div>
