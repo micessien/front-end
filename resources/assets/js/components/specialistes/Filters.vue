@@ -9,11 +9,11 @@
             <label for="STI">STI Tests</label>
             <input type="radio" id="Contraceptive" name="type_patient">
             <label for="Contraceptive">Contraceptive counselling</label>
-            <input type="radio" id="Menstruation" name="type_patient">
+            <input type="radio" id="Menstruation" name="type_patient" checked>
             <label for="Menstruation">Menstruation</label>
             <input type="radio" id="Cancer" name="type_patient">
             <label for="Cancer">infections</label>
-            <input type="radio" id="Infections" name="type_patient" checked>
+            <input type="radio" id="Infections" name="type_patient">
             <label for="Infections">Cancer</label>
           </div>
           <!-- <nav aria-label class="add_top_20">

@@ -49781,7 +49781,8 @@ var staticRenderFns = [
                 attrs: {
                   type: "radio",
                   id: "Menstruation",
-                  name: "type_patient"
+                  name: "type_patient",
+                  checked: ""
                 }
               }),
               _vm._v(" "),
@@ -49796,12 +49797,7 @@ var staticRenderFns = [
               _c("label", { attrs: { for: "Cancer" } }, [_vm._v("infections")]),
               _vm._v(" "),
               _c("input", {
-                attrs: {
-                  type: "radio",
-                  id: "Infections",
-                  name: "type_patient",
-                  checked: ""
-                }
+                attrs: { type: "radio", id: "Infections", name: "type_patient" }
               }),
               _vm._v(" "),
               _c("label", { attrs: { for: "Infections" } }, [_vm._v("Cancer")])
